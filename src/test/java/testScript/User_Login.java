@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import utility.BaseClass;
@@ -25,7 +26,7 @@ public class User_Login extends BaseClass{
 		List<WebElement> products = pageObject.productLST;
 		for(WebElement product : products) {
 			Assert.assertEquals(product.getText().contains("Desktop"), true);
-		}
-		
+		}	
 	}
+
 }

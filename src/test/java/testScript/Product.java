@@ -1,6 +1,7 @@
 package testScript;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import utility.BaseClass;
 
@@ -31,7 +32,7 @@ public class Product extends BaseClass{
 	
 	@Test
 	public void TC_invalidCardPayment() throws Exception {
-		login();
+//		login();
 		pageObject.books.click();
 		pageObject.AddToCart.click();
 		pageObject.ShoppingCart.click();
@@ -50,4 +51,5 @@ public class Product extends BaseClass{
 		Assert.assertEquals(pageObject.wrongCardMsg.getText(), "Wrong card number");
 		
 	}
+	
 }
